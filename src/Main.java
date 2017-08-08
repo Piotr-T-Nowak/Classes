@@ -46,43 +46,61 @@ public class Main {
 		dodge.setColor("yellow");
 		dodge.volume = 5997;
 		dodge.maxCapacity = 50.0;
-		dodge.tank(25);
-		
-		dodge.printSpecification();
-
-		dodge.setColor("black");
-		System.out.println(dodge.getColor());
-		dodge.drive(15);
-		dodge.printSpecification();
-
-		dodge.drive(100);
-		dodge.printSpecification();
-		
-		dodge.drive(1000);
-		dodge.printSpecification();
-		
-		dodge.drive(240);
-		dodge.printSpecification();
-		
-		dodge.tank(15);
-		dodge.printSpecification();
-		
-		dodge.tank(79);
-		dodge.drive(76);
-		dodge.printSpecification();
-		
-		dodge.turnRight();
-		dodge.turnRight();
-		dodge.turnRight();
-		dodge.turnRight();
-		dodge.turnRight();
-		dodge.turnLeft();
+//		dodge.tank(25);
 //		
-		Car opel = new Car(62, 1998, "green");
-		opel.printSpecification();
+//		dodge.printSpecification();
+//
+//		dodge.setColor("black");
+//		System.out.println(dodge.getColor());
+//		dodge.drive(15);
+//		dodge.printSpecification();
+//
+//		dodge.drive(100);
+//		dodge.printSpecification();
+//		
+//		dodge.drive(1000);
+//		dodge.printSpecification();
+//		
+//		dodge.drive(240);
+//		dodge.printSpecification();
+//		
+//		dodge.tank(15);
+//		dodge.printSpecification();
+//		
+//		dodge.tank(49);
+//		dodge.drive(15);
+//		dodge.printSpecification();
+//		
 //		m.fun(12, 14.5);
 //		m.fun(12.4, 12);
 ////		m.fun(12, 14);
+		
+		Engine diesel = new Engine();
+//		diesel.start();
+//		System.out.println(diesel.gear);
+//		
+//		diesel.setGear(1);
+//		System.out.println(diesel.gear);
+//		
+//		diesel.setGear(4);
+//		System.out.println(diesel.gear);
+//		
+//		dodge.drive(10);
+//		
+//		diesel.runForTime(15);
+//		
+//		diesel.setGear(6);
+//		System.out.println(diesel.gear);
+//		
+//		diesel.runForTime(15);
+//		diesel.shutDown();
+//		System.out.println(diesel.engineStatus);
+		
+		Cocpit corsa = new Cocpit();
+		
+		corsa.turnLightOn();
+		corsa.turnLightOff();
+		corsa.wipers(2);
 	}
 //	
 //	

@@ -5,23 +5,10 @@ public class Car {
 	private String color;
 	public int volume;
 	public double maxCapacity;
-	String [] worldDirections = {"NORTH", "EAST", "SOUTH", "WEST"};
-	public int direction;
 
-	Car() {
-		direction = 0;
-	}
-	
-	Car(int volume, double maxCapacity, String color) {
-		this.volume = volume;
-		this.maxCapacity = maxCapacity;
-		this.color = color;
-	}
-	
-	
-	public void setColor(String color) {
-		if (!color.equals("pink")) {
-			this.color = color;
+	public void setColor(String c) {
+		if (!c.equals("pink")) {
+			color = c;
 		}
 	}
 
@@ -67,34 +54,14 @@ public class Car {
 			return burnedFuel;
 		}
 	}
-	
-	void turnRight() {
-		System.out.println("Turning right");
-		direction++;
-		if( direction > worldDirections.length - 1) {
-			direction = 0;
-		}
-		
-		System.out.println(worldDirections[direction]);
-	}
-	
-	void turnLeft() {
-		System.out.println("Turning left");
-		direction--;
-		if(direction < 0) {
-			direction = worldDirections.length;
-		}
-		System.out.println(worldDirections[direction]);
-	}
-	
 	/*
   kierunkowskazy dodac
 	 * tablica kierunkow swiata(4) String; 
 	 * zmienna kierunku (index tablicy [0 - 3])
 	 * funkcja prawo
 	 * 1)wlacza kierunek (wypisz "tiktiktik")
-	 * 2)skrï¿½ca w prawo (zmienna kierunku +1) (pamietaj, ze 3 + 1 -> 0)
-	 * 3)wyï¿½ï¿½cza kierunek
+	 * 2)skrêca w prawo (zmienna kierunku +1) (pamietaj, ze 3 + 1 -> 0)
+	 * 3)wy³¹cza kierunek
 	 * 4) wypisz w ktora strone aktualnie jedziesz
 	 * funkcja lewo (tak samo jak prawo)
 	 */
