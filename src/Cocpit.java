@@ -22,7 +22,7 @@ public class Cocpit {
 		if(speed < 1) {
 			System.out.println("Wipers turned off");
 		}
-		else  {
+		else  {	//zamien na else if
 			if(speed < wiper) {
 				System.out.println("Wipers turned on, speed = " + speed);
 			}

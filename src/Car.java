@@ -1,10 +1,25 @@
 
 public class Car {
 
-	private double fuel;
+	protected double fuel;
 	private String color;
 	public int volume;
 	public double maxCapacity;
+	private Engine engine;
+	public int direction;
+
+//	Car() {
+//		direction = 0;
+//		engine = new Engine();
+//	}
+
+	Car(int volume, double maxCapacity, String color) {
+		this.volume = volume;
+		this.maxCapacity = maxCapacity;
+		this.color = color;
+		direction = 0;
+		engine = new Engine();
+	}
 
 	public void setColor(String c) {
 		if (!c.equals("pink")) {
@@ -22,30 +37,28 @@ public class Car {
 	}
 
 	public void drive(int time) {
-		
-			System.out.println("let's drive for " + time + " min");
+
+		System.out.println("let's drive for " + time + " min");
 		System.out.println("You burned " + burnFuel(time) + "L");
-		 if (fuel <= maxCapacity / 10) {
+		if (fuel <= maxCapacity / 10) {
 			System.out.println("TANK!");
-		 }
+		}
 
 	}
 
 	public void tank(int litters) {
 		if (fuel + litters <= maxCapacity) {
 			fuel += litters;
-		}
-		else {
+		} else {
 			System.out.println("TOO MUCH FUEL");
 			fuel = maxCapacity;
 		}
 	}
-		
 
 	private double burnFuel(int time) {
 		// 6l / 100km
 		// 60km / h
-		double burnedFuel = time * 0.06;
+		double burnedFuel = engine.runForTime(time);
 		if (fuel < burnedFuel) {
 			System.out.println("YOU CANNOT DRIVE THAT LONG");
 			return 0;
@@ -54,17 +67,17 @@ public class Car {
 			return burnedFuel;
 		}
 	}
+
+	public void changeGear(int gear) {
+		engine.gear = gear;
+	}
+
 	/*
-  kierunkowskazy dodac
-	 * tablica kierunkow swiata(4) String; 
-	 * zmienna kierunku (index tablicy [0 - 3])
-	 * funkcja prawo
-	 * 1)wlacza kierunek (wypisz "tiktiktik")
-	 * 2)skrêca w prawo (zmienna kierunku +1) (pamietaj, ze 3 + 1 -> 0)
-	 * 3)wy³¹cza kierunek
-	 * 4) wypisz w ktora strone aktualnie jedziesz
+	 * kierunkowskazy dodac tablica kierunkow swiata(4) String; zmienna kierunku
+	 * (index tablicy [0 - 3]) funkcja prawo 1)wlacza kierunek (wypisz
+	 * "tiktiktik") 2)skrï¿½ca w prawo (zmienna kierunku +1) (pamietaj, ze 3 + 1
+	 * -> 0) 3)wyï¿½ï¿½cza kierunek 4) wypisz w ktora strone aktualnie jedziesz
 	 * funkcja lewo (tak samo jak prawo)
 	 */
-	
 
 }

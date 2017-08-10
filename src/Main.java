@@ -71,6 +71,15 @@ public class Main {
 //		dodge.drive(15);
 //		dodge.printSpecification();
 //		
+
+		dodge.drive(10);
+		dodge.tank(40);
+		dodge.changeGear(2);
+		dodge.drive(15);
+		
+		
+		
+		
 //		m.fun(12, 14.5);
 //		m.fun(12.4, 12);
 ////		m.fun(12, 14);
@@ -85,7 +94,6 @@ public class Main {
 //		diesel.setGear(4);
 //		System.out.println(diesel.gear);
 //		
-//		dodge.drive(10);
 //		
 //		diesel.runForTime(15);
 //		
@@ -94,14 +102,19 @@ public class Main {
 //		
 //		diesel.runForTime(15);
 //		diesel.shutDown();
-//		System.out.println(diesel.engineStatus);
-		
+//		System.out.println(diesel.engineStarted);
+//		
 		Cocpit corsa = new Cocpit();
 		
 		corsa.turnLightOn();
 		corsa.turnLightOff();
 		corsa.wipers(2);
+		
+		SportCar viper = new SportCar();
+		viper.burningTires();
+		viper.drive(15);
 	}
+	
 //	
 //	
 //	8

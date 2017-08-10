@@ -1,11 +1,8 @@
 
 public class Engine {
 
-	Car audi = new Car();
-	
-	boolean engineStatus;
-	public	int gear;
-	double burningFuel;
+	boolean engineStarted;
+	public int gear;
 
 	Engine() {
 		gear = 0;
@@ -13,37 +10,39 @@ public class Engine {
 
 	void start() {
 		System.out.println("Engine has been started");
-		engineStatus = true;
+		engineStarted = true;
 
 	}
 
 	void shutDown() {
 		System.out.println("Engine shutted down");
-		engineStatus = false;
+		engineStarted = false;
 	}
 
 	void setGear(int newGear) {
 
+//		zamien Math.max i Math.min()
+		
 		if (newGear < -1) {
 			gear = -1;
-
+		} else if (newGear > 5) {
+			gear = 5;
 		} else {
-			if (newGear > 5) {
-				gear = 5;
-			} else {
-				gear = newGear;
-			}
+			gear = newGear;
 		}
 	}
 
-	void runForTime(int time) {
-		if (engineStatus = true) {
-			burningFuel = time * gear;
-			System.out.println(burningFuel);
+	double runForTime(int time) {
+		double burningFuel;
+		if (engineStarted = true) {
+			// what if gear is -1?
+			burningFuel = time * gear * 0.06;
+			System.out.println("You're trying to burn :" + burningFuel + " l");
 		} else {
-			System.out.println("Start the Engine");
+			burningFuel = 0;
+			System.out.println("Start the Engine");	
 		}
-
+		return burningFuel;
 	}
 
 }
